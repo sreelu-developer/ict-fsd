@@ -1,0 +1,43 @@
+<div class='card'>
+    <div class='card-header'>
+        {{title}}
+
+    </div>
+    <div class='card-body'>
+        <div class='table-responsive'>
+            <table class='table'>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Author Name</th>
+                        <th>About</th>
+                        <th>Major Works</th>
+                       
+                    </tr>
+                </thead>
+                <tbody>
+                   <tr *ngFor='let author of authors'>
+                       <td><img [src]='author.imageUrl'
+                        [title]='author.author'
+                        [style.width.px]= 'imageWidth'
+                        [style.margin.px]='imageMargin'>
+                    </td>
+                    <td>{{ author.authorName }}</td>
+                    <td>{{ author.majorworks }}</td>
+                    <td>{{ author.description }}</td>
+
+                    <td>
+                        <button   *ngIf="_authService.loggedInAdmin()" (click)= "editAuthor(author)" class="btn btn-success">Edit</button>
+                        <button *ngIf="_authService.loggedInAdmin()" (click) = "deleteauth(author)"  class="btn btn-danger">Delete</button>
+
+                    </td>
+                  
+                   </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    
+</div>

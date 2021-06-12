@@ -1,0 +1,66 @@
+
+      <div class="container h-100">
+            <div class="d-flex justify-content-center h-100">
+            <span class="anchor" id="formLogin"></span>
+                <div class="user_card">
+                    <div class="d-flex justify-content-center">
+                        <br><br><br><h1 style="color: rgb(255, 255, 255);text-align: center;font-family: 'Times New Roman', Times, serif;">Login</h1><br>
+                    </div>
+                    <div class="d-flex justify-content-center form_container">
+                        <form class ="form" #userLogin='ngForm' (ngSubmit)=loginUser()>
+                            <!-- <div class="input-group mb-3">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                </div>
+                                <input type="text" name="" class="form-control input_user" value="" placeholder="username">
+                            </div> -->
+                            <div class="input-group mb-2">
+                                <div class="input-group-append">
+                                    
+                                </div>
+                                <input [(ngModel)]="loginUserData.email" type="text" name="email" class="form-control input_pass" value=""
+                                 #email="ngModel" [class.is-invalid]="email.invalid && email.touched" value="" placeholder="Email-id" 
+                                pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                               
+                            <!-- <small class="text-danger"[class.d-none]="email.valid || email.touched">Enter a valid email</small> -->
+                </div>
+                <div class="input-group mb-2">
+                                <div class="input-group-append">
+                                    
+                                </div>
+                                <input [(ngModel)]="loginUserData.password" type="password" name="password"  class="form-control input_pass" value="" placeholder="password" 
+                                 #password="ngModel" [class.is-invalid]="password.invalid && password.touched" 
+                                  pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$"  required>
+                            
+                                <!-- <small class= "text-danger" [class.d-none]="password.valid || password.touched">Enter a valid password</small> -->
+                </div>
+                
+                <!-- <div class="input-group mb-2">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                </div>
+                                <input type="re-enter password" name="" class="form-control input_pass" value="" placeholder="re-enter password">
+                </div> -->
+                <!-- <div class="input-group mb-2">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                </div>
+                                <input type="password" name="" class="form-control input_pass" value="" placeholder="password">
+                            </div> -->
+                            <div class="form-group">
+                            
+                            </div>
+                                <div class="d-flex justify-content-center mt-3 login_container">
+                         <button (click) = "loginUser()"  [disabled]="userLogin.form.invalid" type="button" name="button" class="btn btn-success login_btn">Login</button>
+                       </div>
+                        </form>
+                    </div>
+		
+				<div class="mt-4">
+					<div class="d-flex justify-content-center links">
+						Don't have an account? <a href="/register" class="ml-2">Register</a>
+					</div>
+					
+				</div>
+			</div>
+		</div>

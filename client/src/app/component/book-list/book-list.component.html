@@ -1,0 +1,51 @@
+<div class='card'>
+    <div class='card-header'>
+        {{title}}
+
+    </div>
+    <div class='card-body'>
+        <div class='table-responsive'>
+            <table class='table'>
+                <thead>
+                    <tr>
+                        <th>
+                            
+                        </th>
+                        <th>Book Name</th>
+                        <th>Genre</th>
+                        <th>Author</th>
+                        <th>About</th>
+                        <th>5 Star Rating</th>
+                        <th *ngIf="_authService.loggedInAdmin()">Action</th>
+                       
+                    </tr>
+                </thead>
+                <tbody>
+                   <tr *ngFor='let book of books'>
+                       <td><img [src]='book.imageUrl'
+                        [title]='book.bookName'
+                        [style.width.px]= 'imageWidth'
+                        [style.margin.px]='imageMargin'>
+                    </td>
+                    <td>{{ book.bookName }}</td>
+                    <td>{{ book.bookCode }}</td>
+                    <td>{{ book.authorName }}</td>
+                    <td>{{ book.description }}</td>
+                    <td>{{ book.starRating }}</td>
+
+                    <td>
+                        <!-- <a href="/buy" *ngIf="_authService.loggedInUser()" class="btn btn-primary">Buy</a> -->
+                        <button   *ngIf="_authService.loggedInAdmin()" (click)= "edit(book)" class="btn btn-success">Edit</button>
+                        <button *ngIf="_authService.loggedInAdmin()" (click) = "delete(book)"  class="btn btn-danger">Delete</button>
+
+                    </td>
+                  
+                   </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    
+</div>

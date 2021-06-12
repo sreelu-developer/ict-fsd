@@ -1,0 +1,144 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+html{
+    /* to make the footer fixed to the bottom. parent elemnt html must be position: relative */
+    position: relative;
+}
+body{
+    background-color: rgb(22, 10, 9);
+    margin-bottom: 100px;
+}
+.navbar{
+    background :black;
+}
+.navbar .dropdown .dropdown-menu{
+    background :black;
+}
+.navbar.scrolled{
+    background:rgb(68, 67, 64);
+    transition: background 700ms;
+}
+.navbar-nav .nav-item .nav-link,.navbar-nav .nav-item .dropdown-item {
+    color: rgba(255,255,255,.8);
+    
+}
+.navbar-nav .nav-item .nav-link:hover,.navbar-nav .nav-item .dropdown-item:hover {
+    color: rgb(255, 255, 255);
+    background :linear-gradient(to right, rgb(90, 88, 86), #131212);
+}
+.jumbotron#mainjumbo{
+    border-radius: 0;
+    background-color: rgb(94, 89, 83);
+}
+#mainHeading{
+    /* text-shadow: 0px 4px 8px rgba(216, 216, 216, 0.6),
+                    0px 8px 13px rgba(189, 187, 187, 0.4),
+                    0px 18px 23px rgba(129, 129, 129, 0.1); */
+                    text-shadow: 0px 4px 8px rgba(0,0,0,0.6), 0px 8px 13px rgba(0,0,0,0.4), 0px 18px 23px rgba(0,0,0,0.1);
+}
+
+#mainLetter,#fourthLetter,#seventhLetter{
+    display: inline-block;
+}
+
+#strangebox{
+
+    height:140px;
+    width:40%;
+    border-style: ridge;
+    border-width: 5px;
+    border-color:rgb(128, 74, 14);
+    background-color: rgb(201, 124, 23);
+}
+.container.paddingcorrection{
+    padding:0px 0px;
+}
+
+.articles{
+    /* min-height: 300px; */
+    margin-top: -5rem;
+    background-color: white;
+    padding-top: 55px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.imgsize{
+    height: 85%;
+    width: 85%;
+}
+
+
+
+.sourcesite{
+    color: white;
+    background-color: grey;
+    font-weight: bold;
+    padding: 3px 6px;
+    width: fit-content;
+    border-radius: 4px;
+}
+.blogtext{
+    color: grey;
+}
+
+
+.footer{
+    position: absolute;
+    bottom: 2px;
+    width: 100%;
+}
+.footer h3{
+    color: rgb(88, 87, 87);
+    margin-bottom: 0;
+}
+.twtbg{
+    background-color: #00acee ;
+
+}
+.fbbg{
+    background-color:#3b5998 ;
+}
+.googlebg{
+    background-color:#db4a39 ;
+
+}
+
+
+@media (max-width:768px){
+    span.display-1{
+
+        font-size: 3rem;
+    }
+}
+
+@media (max-width:576px){
+    .articles{
+        margin-top:-2rem;
+    }
+    /* .imgsize{
+        height: 60%;
+        width: 60%;
+    } */
+    hr{
+        margin-bottom: 5rem;
+    }
+    body{
+        margin-bottom: 145px;
+    }
+
+}
+#mainicon{
+   
+    animation: iconRotate infinite 5s linear ;
+    
+}
+@keyframes iconRotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

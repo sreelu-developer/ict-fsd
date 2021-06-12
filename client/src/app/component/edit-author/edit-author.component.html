@@ -1,0 +1,42 @@
+<div class='card'>
+    <form (ngSubmit)="editAuthor()">
+        <div class='card-header'>
+          
+        </div>
+        <div class='card-body'>
+            <div class='table-responsive'>
+                <table class='table'>
+                    <tbody>
+    
+
+                        <tr>
+                            <td><label>Author Name</label></td>
+                            <td><input type="text" name="a_name" [(ngModel)] ="authorItem.authorName"/></td>
+                        </tr>
+
+                        <tr>
+                            <td><label>Major Works</label></td>
+                            <td><input type="text" name="a_code" [(ngModel)] ="authorItem.majorworks"/></td>
+                        </tr>
+
+          
+                        <tr>
+                            <td><label>About</label></td>
+                            <td><input type="text" name="a_desc" [(ngModel)] ="authorItem.description"/></td>
+                        </tr>
+                        <tr>
+                            <td><label>Authot imageUrl</label></td>
+                            <td><input type="text" name="a_image" [(ngModel)] ="authorItem.imageUrl"/></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="submit" value="Submit"/></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </form>
+
+</div>

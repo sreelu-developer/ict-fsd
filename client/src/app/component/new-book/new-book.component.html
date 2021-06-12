@@ -1,0 +1,58 @@
+<div class='card'>
+    <form (ngSubmit)="AddBook()">
+        <div class='card-header'>
+            {{title}}
+        </div>
+        <div class='card-body'>
+            <div class='table-responsive'>
+                <table class='table'>
+                    <tbody>
+                        <tr>
+                            <td><label>Book Id</label></td>
+                            <td><input type="text" name="b_id" [(ngModel)] ="bookItem.bookId"/></td>
+                        </tr>
+
+                        <tr>
+                            <td><label>Book Name</label></td>
+                            <td><input type="text" name="b_name" [(ngModel)] ="bookItem.bookName"/></td>
+                        </tr>
+
+                        <tr>
+                            <td><label>Genre</label></td>
+                            <td><input type="text" name="b_code" [(ngModel)] ="bookItem.bookCode"/></td>
+                        </tr>
+
+                        <tr>
+                            <td><label>Author Name</label></td>
+                            <td><input type="text" name="b_auth" [(ngModel)] ="bookItem.authorName"/></td>
+                        </tr>
+
+                        <tr>
+                            <td><label>Book Description</label></td>
+                            <td><input type="text" name="b_desc" [(ngModel)] ="bookItem.description"/></td>
+                        </tr>
+
+                        <!-- <tr>
+                            <td><label>Book Price</label></td>
+                            <td><input type="text" name="b_price" [(ngModel)] ="bookItem.price"/></td>
+                        </tr> -->
+                        <tr>
+                            <td><label>Book starRating</label></td>
+                            <td><input type="text" name="b_rating" [(ngModel)] ="bookItem.starRating"/></td>
+                        </tr>
+                        <tr>
+                            <td><label>Book imageUrl</label></td>
+                            <td><input type="text" name="b_image" [(ngModel)] ="bookItem.imageUrl"/></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="submit" value="Submit"/></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </form>
+
+</div>

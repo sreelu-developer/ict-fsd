@@ -1,0 +1,42 @@
+<div class='card'>
+    <form (ngSubmit)="AddAuthor()">
+        <div class='card-header'>
+            {{title}}
+        </div>
+        <div class='card-body'>
+            <div class='table-responsive'>
+                <table class='table'>
+                    <tbody>
+                        
+                        <tr>
+                            <td><label>Author Name</label></td>
+                            <td><input type="text" name="b_name" [(ngModel)] ="AuthorItem.authorName"/></td>
+                        </tr>
+
+                        <tr>
+                            <td><label>Major Works</label></td>
+                            <td><input type="text" name="b_auth" [(ngModel)] ="AuthorItem.majorworks"/></td>
+                        </tr>
+
+                        <tr>
+                            <td><label>Description</label></td>
+                            <td><input type="text" name="b_desc" [(ngModel)] ="AuthorItem.description"/></td>
+                        </tr>
+
+                        <tr>
+                            <td><label>Author imageUrl</label></td>
+                            <td><input type="text" name="b_image" [(ngModel)] ="AuthorItem.imageUrl"/></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="submit" value="Submit"/></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </form>
+
+</div>
+
